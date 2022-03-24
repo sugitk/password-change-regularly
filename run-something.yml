@@ -1,0 +1,11 @@
+---
+- hosts: all
+  gather_facts: true
+
+  vars:
+    ansible_user: ansible
+    ansible_password: "{{ service_account_password }}"
+
+  tasks:
+    - name: run something
+      command: hostname 
