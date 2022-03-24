@@ -5,7 +5,7 @@
   vars:
     vault_passphrase: "foobar" # it should be provided by outside
     ansible_user: ansible
-    ansible_password: "{{ service_account_password | unvault(vault_passphrase) }}"
+    ansible_password: "{{ service_account_password | unvault(vault_passphrase) | to_string }}"
 
   tasks:
     - name: run something
