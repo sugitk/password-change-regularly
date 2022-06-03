@@ -9,8 +9,8 @@
   tasks:
     - name: run something
       command: hostname 
-      result: res
+      register: result
 
     - name: debug
       debug:
-        var: res
+        var: result
