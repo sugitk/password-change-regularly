@@ -7,6 +7,10 @@
     ansible_password: ansible_facts["service_account_password"]
 
   tasks:
+    - name: debug
+      debug:
+        var: ansible_facts
+
     - name: run something
       command: hostname 
       register: result
